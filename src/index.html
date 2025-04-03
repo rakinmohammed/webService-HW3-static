@@ -5,12 +5,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+  <title>Assignment3 Static Page</title>
 </head>
 
 <body>
   <main>
-    <h1>Vanilla JavaScript App</h1>
+    <h1>My Group's APIs</h1>
+    <h2>User.User.Login</h2>
+    <p>Verb: GET</p>
+    <p>Description: Uses user’s login information to attempt to allow access to the system.</p>
+    <p>Path: /User/{email}/{password}</p>
+    <p>Response:  JWT User Authorization Token(JWT). On Invalid Login: Error Message (String): String containing information about login error
+      (invalid login, error accessing user data, etc)</p>
+    <p>-----------------------------------------------------------------------------------------------------------------------------------</p>
+    <h2>User.RegisterUser</h2>
+    <p>Verb: POST</p>
+    <p>Description: Allows new users to create an account in database</p>
+    <p>Path: /User/{name}/{email}/{username}/{password}</p>
+    <p>Response: Successful registration prompt OR error message indicating which data field is incorrect</p>
+    <p>-----------------------------------------------------------------------------------------------------------------------------------</p>
+    <h2>User.SubscribeExtension</h2>
+    <p>Verb: PUT</p>
+    <p>Description: Adds an extension to the users account.</p>
+    <p>Path: /User/{username}/{ExtensionID}</p>
+    <p>Response: Success JSON object with metadata OR Unsuccess JSON object</p>
+    <p>-----------------------------------------------------------------------------------------------------------------------------------</p>
+    <h2>User.GetOwnedExtensions</h2>
+    <p>Verb: GET</p>
+    <p>Description: Returns the list of extensions that are owned and managed by the user.</p>
+    <p>Path: /User/MyExtensions/{username}</p>
+    <p>Response:  JSON Object with the extension and metadata</p>
+    <p>-----------------------------------------------------------------------------------------------------------------------------------</p>
+    <h2>Extension.UploadExtension</h2>
+    <p>Verb: POST</p>
+    <p>Description: Uploads a users extension to the validation service for approval.</p>
+    <p>Path: /Extension/updloadExtension/{ExtensionPacakge}</p>
+    <p>Response: Object containing success message and API key for future access</p>
+    <p>-----------------------------------------------------------------------------------------------------------------------------------</p>
+    <h2>Extension.UpdateExtension</h2>
+    <p>Verb: PUT</p>
+    <p>Description: Modifies an extension that already exists in the database.</p>
+    <p>Path: /Extension/UpdateExtnesion/{ExtensionID}/{extensionPackage}</p>
+    <p>Response: string confirmation message or operation failure message</p>
+    <p>-----------------------------------------------------------------------------------------------------------------------------------</p>
+    <h2>Extensions.RemoveExtension</h2>
+    <p>Verb: DELETE</p>
+    <p>Description: Deletes an uploaded extension from the users repo</p>
+    <p>Path: /Exentsions/removeExtension/{extensionID}/{authKey}</p>
+    <p>Response: string confirmation message or failure message</p>
+    <p>-----------------------------------------------------------------------------------------------------------------------------------</p>
+    <h2>Extnesions.SearchExtensions</h2>
+    <p>Verb: GET</p>
+    <p>Description: Searches for a subset of extensions</p>
+    <p>Path: /Extensions/searchExtensions/{searchQuery}</p>
+    <p>Response: an array containing all extensionIds that match the query</p>
+    <p>-----------------------------------------------------------------------------------------------------------------------------------</p>
+    <h2>Extension.DownloadExtension</h2>
+    <p>Verb: GET</p>
+    <p>Description: Download the specified extension.</p>
+    <p>Path: /Extension/downloadExtension/{extensionID}</p>
+    <p>Response: extension download link</p>
+    <p>-----------------------------------------------------------------------------------------------------------------------------------</p>
+    <h2>Extension.LogBug</h2>
+    <p>Verb: POST</p>
+    <p>Description: form in which user can report a bug for an extension.</p>
+    <p>Path: /Extension/downloadExtensions/{extensionID}/{BugTitle}/{BugDescription}</p>
+    <p>Response: success message</p>
+    <p>-----------------------------------------------------------------------------------------------------------------------------------</p>
   </main>
 </body>
 
